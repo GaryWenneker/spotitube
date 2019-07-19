@@ -1,0 +1,31 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "strictNullChecks": false, // enable strict null checks as a best practice
+        "jsx": "react", // use typescript to transpile jsx to js
+        "target": "es6", // specify ECMAScript target version
+        "moduleResolution": "node",
+        "alwaysStrict": false,
+        "strictFunctionTypes": false, // disables bivariant parameter checking for function types
+        "strictPropertyInitialization": false, // ensures non-undefined class properties
+        "noImplicitAny": false, // warn on expresions and declarations with an implied 'any' type
+        "noEmitOnError": true, // do not emit  outputs if any type checking errors were reported
+        "removeComments": false, // do not commit comments to output
+        "sourceMap": false, // generates corresponding .map files
+        "watch": true, // watch input files
+        "allowJs": true, // allow javascript files to be compiled
+        "allowSyntheticDefaultImports": true, // allow default inports from modules with no default exports
+        "allowUnusedLabels": true,
+        "allowUnreachableCode": true
+    },
+    "exclude": [
+        "node_modules/**/*",
+    ],
+    "include": [
+        "./src/**/*.tsx", "./src/**/*.ts"
+    ],
+    "typeRoots": [
+        "node_modules/@types",
+        "../@types"
+    ]
+}

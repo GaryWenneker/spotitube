@@ -1,0 +1,7 @@
+id: shared
+name: Shared ContentBlock
+componentName: ContentBlock
+fields:
+  heading: GraphQL Sample 1
+  content: |
+    <p>A child route here to illustrate the power of GraphQL queries. <a href="/graphql">Back to GraphQL route</a></p>

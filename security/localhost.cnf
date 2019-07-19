@@ -1,0 +1,26 @@
+# # openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.pem -config localhost.cnf -sha256
+[req]
+distinguished_name = req_distinguished_name
+x509_extensions = v3_req
+prompt = no
+
+# distinguished_name
+[ req_distinguished_name ]
+countryName            = "NL"                       # C=
+stateOrProvinceName    = "AMSTERDAM"                # ST=
+localityName           = "ANY"                     # L=
+postalCode             = "1019AA"                   # L/postalcode=
+streetAddress          = "Milky Way"                # L/street=
+organizationName       = "SITECORE.SC"              # O=
+organizationalUnitName = "IT Department"            # OU=
+commonName             = "SITECORE.SC"              # CN=
+emailAddress           = "webmaster@SITECORE.SC"    # CN/emailAddress=
+
+[v3_req]
+keyUsage = critical, digitalSignature, keyAgreement
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = www.localhost.com
+DNS.2 = localhost.com
+DNS.3 = localhost
